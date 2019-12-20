@@ -7,12 +7,14 @@ class User extends Model {
       {
         name: Sequelize.STRING,
         email: Sequelize.STRING,
+        is_admin: Sequelize.BOOLEAN,
         password_hash: Sequelize.STRING
       },
       {
         sequelize
       }
     );
+    return this;
   }
 
   checkPassword(password) {

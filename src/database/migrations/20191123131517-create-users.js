@@ -23,6 +23,11 @@ module.exports = {
         allowNull: false
       },
 
+      is_admin: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+      },
+
       created_at: {
         type: Sequelize.DATE,
         allowNull: false
@@ -35,7 +40,7 @@ module.exports = {
     });
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: queryInterface => {
     return queryInterface.dropTable('users');
   }
 };
